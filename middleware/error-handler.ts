@@ -5,7 +5,7 @@ import type {
 } from "express-serve-static-core";
 import { StatusCodes } from "http-status-codes";
 import mongoose from "mongoose";
-import { CustomAPIError } from "../errors";
+import { CustomAPIError } from "../errors/index.ts";
 
 const errorHandlerMiddleware = (
   err: Error,
@@ -13,7 +13,7 @@ const errorHandlerMiddleware = (
   res: Response,
   next: NextFunction,
 ) => {
-  let customError = {
+  const customError = {
     // set default
     statusCode:
       err instanceof CustomAPIError

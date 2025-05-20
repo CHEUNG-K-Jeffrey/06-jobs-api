@@ -20,6 +20,10 @@
 
     "verbatimModuleSyntax": true,
 
-    "outDir": "dist"
+    "rewriteRelativeImportExtensions": true,
+
+    "outDir": "dist",
+
+    "target": "ES2024"
   }
 }

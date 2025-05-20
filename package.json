@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "prepare": "simple-git-hooks",
     "start": "tsx --watch app.js",
-    "build": "tsc",
+    "build": "tsc --rewriteRelativeImportExtensions",
     "type-check": "tsc --noEmit"
   },
   "simple-git-hooks": {
     "pre-commit": [
-      "npx pretty-quick --staged",
+      "npx biome check --staged",
       "npm run type-check"
     ]
   },
@@ -34,6 +35,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",

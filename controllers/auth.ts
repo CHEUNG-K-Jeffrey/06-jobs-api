@@ -1,8 +1,8 @@
 import type { Request, Response } from "express-serve-static-core";
 
-import User from "../models/User";
+import User from "../models/User.tsx";
 import { StatusCodes } from "http-status-codes";
-import { BadRequestError, UnauthenticatedError } from "../errors";
+import { BadRequestError, UnauthenticatedError } from "../errors/index.ts";
 
 const register = async (req: Request, res: Response) => {
   const user = await User.create({
