@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "simple-git-hooks",
     "start": "tsx --watch app.js",
+    "build": "tsc",
     "type-check": "tsc --noEmit"
   },
   "simple-git-hooks": {

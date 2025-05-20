@@ -18,6 +18,8 @@
     // Disallow features that require cross-file awareness
     "isolatedModules": true,
 
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+
+    "outDir": "dist"
   }
 }
