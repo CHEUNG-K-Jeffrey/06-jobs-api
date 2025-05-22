@@ -1,6 +1,6 @@
 import type { Request, Response } from "express-serve-static-core";
 
-import User from "../models/User.tsx";
+import User from "../models/User.ts";
 import { StatusCodes } from "http-status-codes";
 import { BadRequestError, UnauthenticatedError } from "../errors/index.ts";
 

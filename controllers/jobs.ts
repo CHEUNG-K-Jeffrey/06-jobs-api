@@ -1,6 +1,6 @@
 import type { JobRequest } from "../types.ts";
 import type { Response } from "express-serve-static-core";
-import Job from "../models/Job.tsx";
+import Job from "../models/Job.ts";
 import { StatusCodes } from "http-status-codes";
 import { BadRequestError, NotFoundError } from "../errors/index.ts";
 
