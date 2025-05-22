@@ -3,12 +3,10 @@ import type {
   Response,
   NextFunction,
 } from "express-serve-static-core";
-import type { AuthRequest } from "../types";
+import type { AuthRequest } from "../types.ts";
 
-import User from "../models/User";
 import jwt from "jsonwebtoken";
-import { UnauthenticatedError } from "../errors";
-import type { StringDecoder } from "string_decoder";
+import { UnauthenticatedError } from "../errors/index.ts";
 
 const auth = async (req: AuthRequest, res: Response, next: NextFunction) => {
   // check header

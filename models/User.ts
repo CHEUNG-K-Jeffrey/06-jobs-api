@@ -1,7 +1,7 @@
-import { Model, Schema, model } from "mongoose";
+import { type Model, Schema, model } from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import ms from "ms";
+import type ms from "ms";
 
 interface IUser {
   name: string;
@@ -10,11 +10,11 @@ interface IUser {
 }
 
 interface IUserMethods {
-  createJWT(): any;
+  createJWT(): unknown;
   comparePassword(password: string): Promise<boolean>;
 }
 
-type UserModel = Model<IUser, {}, IUserMethods>;
+type UserModel = Model<IUser, unknown, IUserMethods>;
 
 const UserSchema = new Schema<IUser>({
   name: {
