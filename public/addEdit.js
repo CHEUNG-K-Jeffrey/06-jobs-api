@@ -64,10 +64,10 @@ export const handleAddEdit = () => {
 					message.textContent = "A communication error occurred.";
 				}
 				enableInput(true);
+			} else if (e.target === editCancel) {
+				message.textContent = "";
+				showJobs();
 			}
-		} else if (e.target === editCancel) {
-			message.textContent = "";
-			showJobs();
 		}
 	});
 };
