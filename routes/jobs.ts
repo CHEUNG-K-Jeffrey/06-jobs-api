@@ -2,11 +2,11 @@ import express from "express";
 
 const router = express.Router();
 import {
-  createJob,
-  deleteJob,
-  getAllJobs,
-  updateJob,
-  getJob,
+	createJob,
+	deleteJob,
+	getAllJobs,
+	updateJob,
+	getJob,
 } from "../controllers/jobs.ts";
 
 router.route("/").post(createJob).get(getAllJobs);
