@@ -1,8 +1,8 @@
-import type { JobRequest } from "../types";
+import type { JobRequest } from "../types.ts";
 import type { Response } from "express-serve-static-core";
-import Job from "../models/Job";
+import Job from "../models/Job.ts";
 import { StatusCodes } from "http-status-codes";
-import { BadRequestError, NotFoundError } from "../errors";
+import { BadRequestError, NotFoundError } from "../errors/index.ts";
 
 const getAllJobs = async (req: JobRequest, res: Response) => {
   const jobs = await Job.find({ createdBy: req.user.userId }).sort("createdAt");

@@ -7,7 +7,7 @@ import {
   getAllJobs,
   updateJob,
   getJob,
-} from "../controllers/jobs";
+} from "../controllers/jobs.ts";
 
 router.route("/").post(createJob).get(getAllJobs);
 
